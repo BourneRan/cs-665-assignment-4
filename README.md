@@ -1,16 +1,19 @@
 
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
-| Name         | FIRST_NAME LAST_NAME       |
-| Date         | MM/DD/YYYY                 |
-| Course       | Fall / Spring / Summer     |
-| Assignment # |                            |
+| Name         | Zhuoran Xu                 |
+| Date         | 03/27/2023                 |
+| Course       | Spring                     |
+| Assignment # | 4                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+I suppose the adapter pattern is the most appropriate pattern.
+The adapter pattern is the best pattern since this pattern creates a new class that "adapts" the interface of an existing class to match another interface.
+
+In this case, my goal is to adapt the CustomerData_USB interface to match the CustomerData_HTTPS interface.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/{YOUR_USERNAME}/cs-665-assignment-4
 
 # Implementation Description 
 
@@ -19,12 +22,22 @@ For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can
 be easily added or removed in the future.
+In the future, if new object types or new methods need to be added, they can be added to the respective interfaces (CustomerData_USB or CustomerData_HTTPS) and their implementations (CustomerData_USB_Impl or CustomerData_HTTPS_Impl). The adapter class (CustomerData_USB_to_HTTPS_Adapter) can then be updated to accommodate these changes.
+
+
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
+The implementation is simply and easy to understand. The interfaces are clearly defined, and there implementations are separated from the adapter class.
+And the adapter class itself is straightforward, as it implements the CustomerData_HTTPS interface but creates a CustomerData_USB object to implement adapting from USB to HTTPS.
+
+
 - Describe how you have avoided duplicated code and why it is important.
+The adapter class (CustomerData_USB_to_HTTPS_Adapter) bridges the gap between the two systems without duplicating the code responsible for data manipulation or retrieval.
+
+
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
-
+  As mentioned earlier, the Adapter design pattern has been used in this implementation. The Adapter pattern was chosen because it allows the old system's API to work seamlessly with the new system's API without modifying the existing code.
 
 # Maven Commands
 
