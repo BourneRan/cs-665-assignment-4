@@ -13,7 +13,7 @@ The adapter pattern is the best pattern since this pattern creates a new class t
 In this case, my goal is to adapt the CustomerData_USB interface to match the CustomerData_HTTPS interface.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-4
+https://github.com/BourneRan/cs-665-assignment-4
 
 # Implementation Description 
 
